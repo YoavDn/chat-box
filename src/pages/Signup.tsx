@@ -6,7 +6,7 @@ const Signup = () => {
     return (
         <section className="sign-up-page  bg-gradient-to-b from-sky-900 to-zinc-300   ">
             <main className='sign-up-card rounded-md'   >
-                <button className='sign-with-google rounded-3xl border-2 text-slate-50 '><span><GoogleIcon /></span> Sign In with Google</button>
+                <button className='sign-with-google  border-2 text-slate-50 '><span><GoogleIcon /></span> Sign In with Google</button>
                 <form>
                     <div className="form-item">
                         <label htmlFor="fullname">Full Name</label>
@@ -20,7 +20,7 @@ const Signup = () => {
                         <label htmlFor="password">Password</label>
                         <input type="password" name='password' />
                     </div>
-                    <button className='text-slate-50 font-semibold text-base bg-sky-600 p-2  px-16 rounded-md' >SignUp</button>
+                    <button className='text-slate-50 font-semibold text-xl bg-blue-500 p-2  px-12 rounded-md' >Signup</button>
                 </form>
                 <div className="login-option">
                     <h2 className='text-zinc-900' >Already have an acount ?</h2>

@@ -27,6 +27,11 @@ body {
         padding-top: 7rem;
     }
 
+    .home-btns {
+        width: 50%;
+        margin-inline: auto;
+    }
+
 
 }
 
@@ -47,6 +52,7 @@ body {
 
         .sidebar {
             flex-basis: 25%;
+            background: rgba(white, .2);
         }
 
         .main-chat-container {
@@ -60,6 +66,7 @@ body {
 
             .msgs-container {
                 flex-basis: 90%;
+                background: rgba(white, .2);
 
             }
 
@@ -125,13 +132,11 @@ body {
         form {
             width: 90%;
             margin: auto;
-            padding-bottom: 2rem;
 
             button {
                 display: block;
-
                 margin: auto;
-                margin-top: 1rem;
+                margin-block: 2rem;
             }
         }
 
@@ -150,13 +155,14 @@ body {
             input {
                 line-height: 2.3rem;
                 border-radius: 4px;
+                color: white;
                 font-size: 18px;
                 background-color: transparent;
                 border: rgb(255, 255, 255) 1px solid;
                 padding-left: 1rem;
 
                 &::placeholder {
-                    color: rgb(56, 56, 56)
+                    color: rgb(229, 229, 229)
                 }
 
                 &:focus {
