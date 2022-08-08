@@ -87,3 +87,85 @@ body {
 
 
 }
+
+
+//signup
+
+
+.sign-up-page {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .sign-up-card {
+        width: 350px;
+        height: 90%;
+        padding: 2rem 0;
+        background: rgba(white, .2);
+
+        .sign-with-google {
+            display: block;
+            padding: .5rem 3rem;
+            margin: auto;
+        }
+
+        form {
+            width: 90%;
+            margin: auto;
+            padding-bottom: 2rem;
+
+            button {
+                display: block;
+
+                margin: auto;
+                margin-top: 1rem;
+            }
+        }
+
+        .form-item {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+
+            label {
+                color: white;
+                font-weight: 700;
+
+                line-height: 2rem;
+            }
+
+            input {
+                line-height: 2.3rem;
+                border-radius: 4px;
+                font-size: 18px;
+                background-color: transparent;
+                border: rgb(255, 255, 255) 1px solid;
+                padding-left: 1rem;
+
+                &::placeholder {
+                    color: rgb(56, 56, 56)
+                }
+
+                &:focus {
+                    outline: none;
+
+                }
+            }
+
+        }
+
+        .login-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-size: 16px;
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+}

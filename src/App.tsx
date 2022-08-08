@@ -4,6 +4,7 @@ import './index.scss'
 import Home from './pages/home'
 import Chat from '././pages/Chat'
 import NavBar from './components/NavBar'
+import Signup from './pages/Signup'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Chat" element={<Chat />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
 
