@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+
+.home-page {
+    height: 93vh;
+
+    .hero-title {
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        ;
+        padding-top: 7rem;
+    }
+
+    .home-btns {
+        margin-inline: auto;
+    }
+}
+
+.nav-bar {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
