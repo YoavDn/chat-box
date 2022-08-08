@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.scss'
 
 import Home from './pages/home'
-import Search from './pages/Search'
+import Chat from '././pages/Chat'
 import NavBar from './components/NavBar'
 
 
@@ -13,7 +13,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Search" element={<Search />} />
+          <Route path="/Chat" element={<Chat />} />
         </Routes>
       </Router>
 
