@@ -107,8 +107,19 @@ body {
 
         .sign-with-google {
             display: block;
-            padding: .5rem 3rem;
+            padding: 0 1.4rem 0rem 1rem;
             margin: auto;
+            font-size: 18px;
+            line-height: 2.5rem;
+            border-radius: 2em;
+
+            span {
+                svg {
+                    transform: translateY(-2px);
+                }
+
+                margin-right: .5rem;
+            }
         }
 
         form {
