@@ -1,12 +1,16 @@
 import * as React from 'react'
 import GoogleIcon from '@mui/icons-material/Google';
 import { useState } from 'react';
+import { signInWithGoogle } from '../services/auth.service';
+import { useDispatch } from 'react-redux';
+import { userSlice } from '../store/userSlice';
 
 
 const Signup = () => {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const dispatch = useDispatch()
 
     const handleSumbit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault()
@@ -20,10 +24,16 @@ const Signup = () => {
         setPassword('')
     }
 
+    const hanldeSignUp = async () => {
+        const user = await signInWithGoogle()
+        if (user === null) return
+        dispatch(userSlice.actions.addUser(user))
+    }
+
     return (
         <section className="sign-up-page  bg-gradient-to-b from-sky-900 to-zinc-300   ">
             <main className='sign-up-card rounded-md'   >
-                <button className='sign-with-google  border-2 text-slate-50 '><span><GoogleIcon /></span> Sign In with Google</button>
+                <button onClick={hanldeSignUp} className='sign-with-google  border-2 text-slate-50 '><span><GoogleIcon /></span> Sign In with Google</button>
                 <form onSubmit={handleSumbit}>
                     <div className="form-item">
                         <label htmlFor="fullname">Full Name</label>

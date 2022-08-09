@@ -1,22 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Iuser } from '../types'
 
-interface IUserState {
-    fullName: string,
-    email: string,
-    id?: string
+interface IinitialState {
+    users: Iuser[],
+    loggedInUser: Iuser | null,
 }
 
-const initialState: IUserState[] = [{
-    fullName: 'yoav',
-    email: 'yoav@gmail.com',
-    id: '39f31'
-}]
+const initialState: IinitialState = {
+    users: [],
+    loggedInUser: null
+}
 
 export const userSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
-        getUsers: (state) => state
+        getUsers: (state) => state,
+        addUser: (state, action: PayloadAction<Iuser>) => {
+            state.users.push(action.payload)
+        }
+
     }
 })
 
